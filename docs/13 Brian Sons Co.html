@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian & Sons Co | Electrician in Round Rock, TX</title>
+    <meta name="description" content="Brian & Sons Co - Trusted electrician serving Round Rock, TX. Reliable electrical services, repairs, installations, and more. Call (512) 877-3921 today!">
+    <style>
+        :root {
+            --deep-blue: #1a2744;
+            --charcoal: #2d2d2d;
+            --dark-bg: #1c1f2e;
+            --accent-blue: #2563eb;
+            --accent-blue-hover: #1d4ed8;
+            --light-blue: #e8f0fe;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --gray-light: #e5e7eb;
+            --gray-medium: #6b7280;
+            --gray-dark: #374151;
+            --gold: #f59e0b;
+            --gold-dark: #d97706;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.06);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 16px;
+            --transition: 0.2s ease;
+            --max-width: 1120px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--off-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            min-width: 320px;
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            background: var(--dark-bg);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+            border-bottom: 3px solid rgba(37, 99, 235, 0.25);
+        }
+
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--accent-blue);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .brand-name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .brand-tagline {
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+
+        .header-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-blue);
+            color: var(--white);
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+            box-shadow: var(--shadow);
+            letter-spacing: 0.01em;
+        }
+        .header-cta-btn:hover {
+            background: var(--accent-blue-hover);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-1px);
+        }
+        .header-cta-btn:active {
+            transform: scale(0.97);
+        }
+        .header-cta-icon {
+            font-size: 1.1rem;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: linear-gradient(170deg, #1a2744 0%, #1e3050 40%, #1c1f2e 100%);
+            color: var(--white);
+            padding: 60px 20px 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-inner {
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fcd34d;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .hero-badge .star {
+            color: var(--gold);
+            margin-right: 2px;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 span {
+            color: #60a5fa;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #d1d5db;
+            max-width: 580px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-blue);
+            color: var(--white);
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+            box-shadow: var(--shadow-lg);
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: var(--accent-blue-hover);
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-2px);
+        }
+        .btn-primary:active {
+            transform: scale(0.96);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--white);
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+            transition: background var(--transition), border-color var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* ========== SECTIONS ========== */
+        .section {
+            padding: 60px 20px;
+        }
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .section-label {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--gray-medium);
+            margin-bottom: 36px;
+            max-width: 600px;
+        }
+
+        /* ========== SERVICES ========== */
+        #services {
+            background: var(--white);
+            border-top: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--gray-light);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .service-card {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: 28px 22px 24px;
+            text-align: left;
+            transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow-sm);
+        }
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+            border-color: #dbeafe;
+        }
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: #dbeafe;
+            color: var(--accent-blue);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            flex-shrink: 0;
+        }
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--charcoal);
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--gray-medium);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ========== ABOUT ========== */
+        #about {
+            background: var(--off-white);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--charcoal);
+        }
+        .about-text p {
+            color: var(--gray-dark);
+            line-height: 1.75;
+            margin-bottom: 16px;
+            font-size: 0.98rem;
+        }
+        .about-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .highlight-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        .about-image-placeholder {
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+            border-radius: var(--radius-lg);
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            min-height: 250px;
+        }
+        .about-image-placeholder .icon-large {
+            font-size: 5rem;
+            opacity: 0.5;
+        }
+
+        /* ========== REVIEWS ========== */
+        #reviews {
+            background: var(--white);
+            border-top: 1px solid var(--gray-light);
+        }
+        .reviews-card {
+            background: var(--off-white);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid transparent;
+        }
+        .reviews-stars {
+            font-size: 2.2rem;
+            color: var(--gold);
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+        .reviews-rating {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+        .reviews-rating small {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--gray-medium);
+        }
+        .reviews-count {
+            font-size: 1.05rem;
+            color: var(--gray-medium);
+            margin-top: 6px;
+        }
+        .reviews-badge {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            letter-spacing: 0.02em;
+        }
+        .reviews-note {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        /* ========== CONTACT ========== */
+        #contact {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 60px 20px;
+        }
+        #contact .section-label {
+            color: #60a5fa;
+        }
+        #contact .section-title {
+            color: var(--white);
+        }
+        #contact .section-subtitle {
+            color: #cbd5e1;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 36px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .contact-info-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(37, 99, 235, 0.2);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            color: #93c5fd;
+        }
+        .contact-info-text strong {
+            display: block;
+            font-size: 0.95rem;
+            color: #e5e7eb;
+            margin-bottom: 2px;
+        }
+        .contact-info-text span,
+        .contact-info-text a {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+        .contact-info-text a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+        .contact-form {
+            background: #262f3f;
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: var(--shadow);
+        }
+        .contact-form h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            letter-spacing: 0.02em;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            border: 2px solid #374151;
+            background: #1f2937;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            width: 100%;
+            resize: vertical;
+            min-width: 0;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        .form-group textarea {
+            min-height: 100px;
+        }
+        .form-group select {
+            appearance: none;
+            cursor: pointer;
+        }
+        .form-submit-btn {
+            background: var(--accent-blue);
+            color: var(--white);
+            border: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            letter-spacing: 0.02em;
+            transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+            box-shadow: var(--shadow);
+            width: 100%;
+        }
+        .form-submit-btn:hover {
+            background: var(--accent-blue-hover);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-1px);
+        }
+        .form-submit-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: #161b22;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            border-top: 1px solid #1f2937;
+        }
+        .site-footer .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        .site-footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== FLOATING CTA (mobile sticky) ========== */
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark-bg);
+            padding: 10px 16px;
+            z-index: 99;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+            border-top: 2px solid rgba(37, 99, 235, 0.3);
+        }
+        .floating-cta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--accent-blue);
+            color: var(--white);
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .about-image-placeholder {
+                order: -1;
+                aspect-ratio: 16 / 10;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-wrap: nowrap;
+                gap: 10px;
+                padding: 10px 14px;
+            }
+            .brand-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+            }
+            .brand-name {
+                font-size: 1.1rem;
+                white-space: nowrap;
+            }
+            .brand-tagline {
+                font-size: 0.7rem;
+            }
+            .header-cta-btn {
+                padding: 10px 16px;
+                font-size: 0.82rem;
+                border-radius: 50px;
+                gap: 4px;
+                white-space: nowrap;
+            }
+            .hero {
+                padding: 40px 16px 50px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .btn-primary,
+            .btn-secondary {
+                padding: 12px 22px;
+                font-size: 0.9rem;
+                width: 100%;
+                justify-content: center;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .service-card {
+                padding: 18px 14px 16px;
+            }
+            .service-card h3 {
+                font-size: 0.95rem;
+            }
+            .service-card p {
+                font-size: 0.78rem;
+            }
+            .service-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section {
+                padding: 40px 16px;
+            }
+            .reviews-rating {
+                font-size: 2.6rem;
+            }
+            .reviews-stars {
+                font-size: 1.6rem;
+            }
+            .contact-form {
+                padding: 20px 16px;
+            }
+            .floating-cta {
+                display: block;
+            }
+            .site-footer .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .brand-name {
+                font-size: 0.95rem;
+            }
+            .header-cta-btn {
+                font-size: 0.75rem;
+                padding: 8px 13px;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero p {
+                font-size: 0.85rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-icon" aria-hidden="true">⚡</div>
+                <div class="brand-info">
+                    <span class="brand-name">Brian &amp; Sons Co</span>
+                    <span class="brand-tagline">Licensed Electricians · Round Rock, TX</span>
+                </div>
+            </div>
+            <a href="tel:+15128773921" class="header-cta-btn" aria-label="Call Brian & Sons Co at (512) 877-3921">
+                <span class="header-cta-icon">📞</span> Call (512) 877-3921
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="star">★</span> <span class="star">★</span> <span class="star">★</span> <span class="star">★</span> <span class="star">★</span>&nbsp; 4.7/5 Rated
+            </div>
+            <h1>Round Rock's Trusted <span>Electrical Experts</span></h1>
+            <p>From flickering lights to full panel upgrades, Brian &amp; Sons Co delivers safe, reliable, and code-compliant electrical work for homes and businesses across Round Rock, TX.</p>
+            <div class="hero-buttons">
+                <a href="tel:+15128773921" class="btn-primary">📞 Call (512) 877-3921</a>
+                <a href="#contact" class="btn-secondary">📋 Get a Free Estimate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="section" id="services">
+        <div class="section-inner">
+            <span class="section-label">Our Services</span>
+            <h2 class="section-title">What We Do Best</h2>
+            <p class="section-subtitle">Professional electrical services for residential and commercial properties in Round Rock and the greater Austin metro area.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Electrical Repairs</h3>
+                    <p>Diagnosing and fixing faulty outlets, switches, breakers, and wiring issues quickly and safely.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Panel Upgrades</h3>
+                    <p>Modern panel replacements and service upgrades from 100A to 200A+ for growing power demands.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Lighting Installation</h3>
+                    <p>Interior &amp; exterior lighting design and install — recessed, landscape, security, and accent lighting.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪭</div>
+                    <h3>Ceiling Fan Install</h3>
+                    <p>Expert ceiling fan mounting, replacement, and wiring — including vaulted and tall ceilings.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>EV Charger Setup</h3>
+                    <p>Level 2 home EV charging station installations — safe, permitted, and ready for your electric vehicle.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Surge Protection</h3>
+                    <p>Whole-home surge protection to safeguard your appliances and electronics from power spikes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-label">About Us</span>
+                    <h2>Family-Owned, Community-Rooted</h2>
+                    <p>Brian &amp; Sons Co has been proudly serving Round Rock, TX, and the surrounding communities with honest, top-quality electrical work. What started as a one-man operation has grown into a trusted family business built on integrity, craftsmanship, and a genuine commitment to our neighbors.</p>
+                    <p>We treat every home like our own — arriving on time, communicating clearly, and never leaving until the job is done right. Our electricians are fully licensed, insured, and continually trained on the latest codes and technologies.</p>
+                    <div class="about-highlights">
+                        <span class="highlight-tag">Licensed &amp; Insured</span>
+                        <span class="highlight-tag">Upfront Pricing</span>
+                        <span class="highlight-tag">Same-Day Service</span>
+                        <span class="highlight-tag">Locally Owned</span>
+                    </div>
+                </div>
+                <div class="about-image-placeholder" aria-label="Brian & Sons Co team">
+                    <span class="icon-large">🏠⚡</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REVIEWS ==================== -->
+    <section class="section" id="reviews">
+        <div class="section-inner">
+            <span class="section-label">Reviews</span>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">We're proud of our reputation — even as we build our review presence.</p>
+            <div class="reviews-card">
+                <div class="reviews-stars">★★★★★</div>
+                <div class="reviews-rating">4.7 <small>/ 5</small></div>
+                <div class="reviews-count">0+ happy customers served</div>
+                <div class="reviews-badge">⭐ Top-Rated Electrician in Round Rock</div>
+                <p class="reviews-note">We're a newer business building our online presence. Be one of the first to leave a review!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" id="contact">
+        <div class="section-inner">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Contact Us Today</h2>
+            <p class="section-subtitle">Need a reliable electrician in Round Rock? We're here to help — call or send us a message.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">📞</div>
+                        <div class="contact-info-text">
+                            <strong>Phone</strong>
+                            <a href="tel:+15128773921">(512) 877-3921</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">📍</div>
+                        <div class="contact-info-text">
+                            <strong>Address</strong>
+                            <span>3639 Gattis School Rd #7210<br>Round Rock, TX 78664</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">🕐</div>
+                        <div class="contact-info-text">
+                            <strong>Hours</strong>
+                            <span>Monday – Friday: 7am – 6pm<br>Saturday: 8am – 2pm<br>Sunday: Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+                    <h3>Request a Free Estimate</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(512) 555-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service...</option>
+                            <option value="repairs">Electrical Repairs</option>
+                            <option value="panel">Panel Upgrade</option>
+                            <option value="lighting">Lighting Installation</option>
+                            <option value="fan">Ceiling Fan Install</option>
+                            <option value="ev">EV Charger Setup</option>
+                            <option value="surge">Surge Protection</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn">📨 Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>&copy; <span id="current-year"></span> Brian &amp; Sons Co. All rights reserved.</span>
+            <span>Proudly serving <strong>Round Rock, TX</strong></span>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING MOBILE CTA ==================== -->
+    <div class="floating-cta" id="floating-cta">
+        <a href="tel:+15128773921">📞 Call (512) 877-3921 — Free Estimate</a>
+    </div>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = form.querySelector('.form-submit-btn');
+            const originalText = btn.textContent;
+            btn.textContent = '✅ Message Sent!';
+            btn.style.background = '#16a34a';
+            btn.style.pointerEvents = 'none';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = 'var(--accent-blue)';
+                btn.style.pointerEvents = 'auto';
+                form.reset();
+            }, 2500);
+        }
+
+        // Hide floating CTA when near footer on mobile
+        const floatingCta = document.getElementById('floating-cta');
+        const contactSection = document.getElementById('contact');
+        if (floatingCta && contactSection && window.innerWidth <= 600) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        floatingCta.style.display = 'none';
+                    } else {
+                        floatingCta.style.display = 'block';
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(contactSection);
+        }
+    </script>
+</body>
+</html>

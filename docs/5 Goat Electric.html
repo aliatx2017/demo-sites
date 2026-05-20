@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Goat Electric — Round Rock's top-rated electrician. 5.0 stars. Residential, commercial, emergency electrical services. Call (512) 822-6555.">
+<title>Goat Electric | Round Rock's #1 Electrician</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;color:#1a1a2e;line-height:1.6}
+header{background:#0f0e17;color:#fff;padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header h1{font-size:1.8rem;font-weight:800;letter-spacing:-0.5px}
+header h1 span{color:#ff8906}
+header p{font-size:0.9rem;opacity:0.8}
+.cta-btn{background:#ff8906;color:#0f0e17;border:none;padding:0.75rem 1.5rem;font-size:1rem;font-weight:700;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
+.cta-btn:hover{background:#e07b00}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;padding:5rem 2rem;text-align:center}
+.hero h2{font-size:2.5rem;margin-bottom:1rem;line-height:1.2}
+.hero h2 span{color:#ff8906}
+.hero p{font-size:1.2rem;opacity:0.9;max-width:600px;margin:0 auto 2rem}
+.hero .cta-btn{font-size:1.2rem;padding:1rem 2.5rem}
+.rating{display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;background:rgba(255,255,255,0.1);padding:0.5rem 1.5rem;border-radius:50px}
+.rating .stars{color:#ff8906;font-size:1.4rem}
+.rating span{font-weight:700}
+section{padding:4rem 2rem;max-width:1100px;margin:0 auto}
+section h2{text-align:center;font-size:2rem;margin-bottom:0.5rem;color:#0f0e17}
+section .subtitle{text-align:center;color:#666;margin-bottom:3rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.service-card{background:#f5f5f8;padding:2rem;border-radius:10px;border-left:4px solid #ff8906;transition:transform 0.2s}
+.service-card:hover{transform:translateY(-3px)}
+.service-card h3{font-size:1.2rem;margin-bottom:0.5rem;color:#0f0e17}
+.service-card p{color:#555;font-size:0.95rem}
+.reviews-section{background:#fafafa}
+.review-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.review-card{background:#fff;padding:2rem;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.review-card .stars{color:#ff8906;font-size:1.2rem;margin-bottom:0.75rem}
+.review-card p{font-style:italic;color:#444;margin-bottom:1rem}
+.review-card .name{font-weight:700;color:#0f0e17}
+.about{background:#fff}
+.about-content{max-width:750px;margin:0 auto;text-align:center;font-size:1.1rem;color:#444}
+.contact{background:#0f0e17;color:#fff}
+.contact h2{color:#fff}
+.contact .subtitle{color:#aaa}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.contact-info h3{color:#ff8906;margin-bottom:0.75rem;font-size:1.1rem}
+.contact-info p{margin-bottom:0.5rem}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:0.75rem;margin-bottom:1rem;border:1px solid #333;border-radius:6px;background:#1a1a2e;color:#fff;font-size:1rem;font-family:inherit}
+.contact-form textarea{min-height:100px;resize:vertical}
+.contact-form button{width:100%}
+footer{background:#0a0a14;color:#666;text-align:center;padding:2rem;font-size:0.9rem}
+.emergency-badge{background:#e63946;color:#fff;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.8rem;font-weight:700;display:inline-block;margin-left:0.5rem}
+@media(max-width:768px){
+  header{flex-direction:column;text-align:center;gap:1rem}
+  .hero h2{font-size:1.8rem}
+  .hero{padding:3rem 1.5rem}
+  section{padding:3rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Goat <span>Electric</span></h1>
+    <p>Round Rock's Most Trusted Electrician</p>
+  </div>
+  <a href="tel:(512) 822-6555" class="cta-btn">📞 (512) 822-6555</a>
+</header>
+
+<section class="hero">
+  <div class="rating">
+    <span class="stars">★★★★★</span>
+    <span>5.0 Rating — Round Rock's #1 Electrician</span>
+  </div>
+  <h2>Electrical problems? <span>We fix it today.</span></h2>
+  <p>Residential and commercial electrical services in Round Rock, TX. Fully licensed, insured, and trusted by hundreds of local homeowners and businesses.</p>
+  <a href="tel:(512) 822-6555" class="cta-btn">Call Now — Free Estimate</a>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <p class="subtitle">Everything electrical — done right the first time</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>⚡ Panel Upgrades</h3>
+      <p>New panel installation, 200A upgrades, sub-panels. Safe, code-compliant, and ready for your EV and solar.</p>
+    </div>
+    <div class="service-card">
+      <h3>🔌 Outlets & Wiring</h3>
+      <p>New outlets, GFCI installation, knob-and-tube replacement, whole-home rewiring.</p>
+    </div>
+    <div class="service-card">
+      <h3>💡 Lighting Design</h3>
+      <p>Indoor/outdoor lighting, recessed, landscape, security lighting. Transform your space.</p>
+    </div>
+    <div class="service-card">
+      <h3>🚨 Emergency Repairs <span class="emergency-badge">24/7</span></h3>
+      <p>Power outages, sparking outlets, burning smells. We're on call day and night.</p>
+    </div>
+    <div class="service-card">
+      <h3>🏠 Home Inspections</h3>
+      <p>Buying or selling? Full electrical inspection with detailed report. Peace of mind.</p>
+    </div>
+    <div class="service-card">
+      <h3>🏢 Commercial Electrical</h3>
+      <p>Office build-outs, retail lighting, warehouse power. Keeping Round Rock businesses running.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <h2>What Our Customers Say</h2>
+  <p class="subtitle">5.0 stars across the board — because we don't cut corners</p>
+  <div class="review-cards">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Goat Electric replaced our entire panel in one day. Professional, clean, and the price was fair. Best electrician in Round Rock hands down."</p>
+      <span class="name">— Michael R., Round Rock</span>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Called at 8pm on a Saturday with a tripping breaker. They talked me through it on the phone and had someone here in 45 minutes. Incredible service."</p>
+      <span class="name">— Sarah T., Brushy Creek</span>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Installed EV charger, outdoor lighting, and fixed three outlets that weren't working. Everything passed inspection first time. Will use again."</p>
+      <span class="name">— David K., Round Rock</span>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <h2>About Goat Electric</h2>
+  <div class="about-content">
+    <p>Goat Electric is a locally owned and operated electrical company serving Round Rock and surrounding areas. We believe in doing the job right — no shortcuts, no upselling, no excuses.</p>
+    <p style="margin-top:1rem;">Our team is fully licensed, bonded, and insured. We show up on time, keep your home clean, and stand behind every job with a satisfaction guarantee.</p>
+    <p style="margin-top:1rem;font-weight:700;">When you need an electrician, don't settle. Call the G.O.A.T.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get a Free Estimate</h2>
+  <p class="subtitle">Available 24/7 for emergencies. Same-day service available.</p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>📞 Call Us</h3>
+      <p style="font-size:1.5rem;font-weight:700;color:#ff8906;">(512) 822-6555</p>
+      <p>Mon-Fri: 7am-6pm<br>Sat: 8am-4pm<br>Emergency: 24/7</p>
+      
+      <h3 style="margin-top:2rem;">📍 Location</h3>
+      <p>806 Pack Saddle Pass<br>Round Rock, TX 78664</p>
+      
+      <h3 style="margin-top:2rem;">✅ Licensed & Insured</h3>
+      <p>TECL #12345<br>Fully Bonded</p>
+    </div>
+    <div class="contact-form">
+      <form onsubmit="event.preventDefault();alert('Thank you! We will call you within 15 minutes.')">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email (optional)">
+        <select>
+          <option>What do you need help with?</option>
+          <option>Panel Upgrade</option>
+          <option>Outlet / Wiring</option>
+          <option>Lighting</option>
+          <option>Emergency Repair</option>
+          <option>Home Inspection</option>
+          <option>Commercial</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell us about your project..."></textarea>
+        <button type="submit" class="cta-btn">Get Free Estimate</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Goat Electric. All rights reserved. | Round Rock, TX | (512) 822-6555</p>
+</footer>
+
+</body>
+</html>
