@@ -3,46 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kevin's Auto Shop | 4.9 Stars | Georgetown Auto Repair</title>
+<title>Kevin's Auto Shop | Georgetown TX | 4.9-Star Auto Repair</title>
 <style>
-:root{--navy:#1a2332;--red:#c0392b;--gold:#d4a843;--bg:#fafafa;--text:#333;--light:#f5f5f5}
+:root{--navy:#1a2332;--red:#c0392b;--gold:#d4a843;--green:#27ae60;--bg:#fafafa;--text:#333;--light:#f5f5f5}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
 a{color:inherit;text-decoration:none}
 
+/* --- Language Toggle --- */
+.lang-bar{background:#111;color:#ccc;padding:4px 20px;display:flex;justify-content:flex-end;gap:8px;font-size:.8rem}
+.lang-bar button{background:none;border:1px solid #555;color:#ccc;padding:3px 10px;border-radius:4px;cursor:pointer;font-size:.8rem;min-height:28px;min-width:44px}
+.lang-bar button.active{background:var(--gold);color:#111;border-color:var(--gold);font-weight:700}
+[lang="es"] .en-only,[lang="en"] .es-only{display:none!important}
+
 .top-bar{background:var(--navy);color:#fff;padding:8px 20px;font-size:.85rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
 .top-bar a{color:var(--gold)}
-.trust-badges{display:flex;gap:16px;flex-wrap:wrap;font-size:.8rem}
+.trust-badges{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem}
 .trust-badges span::before{content:"✓ ";color:var(--gold)}
 
 header{background:var(--navy);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
 header h1{font-size:1.3rem;font-weight:700}
+.header-actions{display:flex;gap:8px;align-items:center}
 .call-btn{background:var(--red);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:1rem;min-height:48px;display:inline-flex;align-items:center;gap:8px;transition:transform .2s}
 .call-btn:hover{transform:scale(1.03)}
+.text-btn{background:var(--green);color:#fff;padding:12px 18px;border-radius:8px;font-weight:700;font-size:.9rem;min-height:48px;display:inline-flex;align-items:center;gap:6px}
 
 .hero{background:linear-gradient(135deg,var(--navy) 0%,#2c3e50 100%);color:#fff;padding:60px 20px;text-align:center}
 .hero h2{font-size:2rem;margin-bottom:12px}
-.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
+.hero p{font-size:1.1rem;opacity:.9;max-width:650px;margin:0 auto 24px}
 .hero .stars{font-size:1.5rem;color:var(--gold);margin-bottom:12px}
-.hero-badges{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:.9rem}
+.hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.hero-badges{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:20px;font-size:.9rem}
 .hero-badges div{background:rgba(255,255,255,.1);padding:8px 16px;border-radius:8px}
 
-.services{padding:60px 20px;max-width:1000px;margin:0 auto}
-.services h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
+.promo-bar{background:linear-gradient(90deg,var(--red),#e74c3c);color:#fff;padding:16px 20px;text-align:center;font-size:1rem}
+.promo-bar strong{font-size:1.1rem}
+
+.financing-bar{background:var(--green);color:#fff;padding:12px 20px;text-align:center;font-size:.95rem;font-weight:600}
+
+section.services{padding:60px 20px;max-width:1000px;margin:0 auto}
+section.services h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .svc-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
 .svc-card:hover{transform:translateY(-3px)}
 .svc-card .icon{font-size:2rem;margin-bottom:12px}
 .svc-card h3{color:var(--navy);margin-bottom:8px;font-size:1.1rem}
 .svc-card p{font-size:.9rem;color:#666}
+.svc-card .price-hint{font-size:.8rem;color:var(--green);font-weight:600;margin-top:8px}
 
-.why{background:var(--light);padding:60px 20px}
+.competitive-edge{background:var(--light);padding:60px 20px}
+.competitive-edge h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:12px}
+.competitive-edge .subtitle{text-align:center;color:#666;margin-bottom:40px;font-size:1rem}
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:950px;margin:0 auto}
+.compare-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.06);text-align:center}
+.compare-card .vs-icon{font-size:2rem;margin-bottom:8px}
+.compare-card h3{color:var(--navy);font-size:1rem;margin-bottom:8px}
+.compare-card .them{color:#999;font-size:.85rem;margin-bottom:6px}
+.compare-card .us{color:var(--green);font-weight:700;font-size:.95rem}
+
+.why{padding:60px 20px}
 .why h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:900px;margin:0 auto}
-.why-card{text-align:center;padding:20px}
+.why-card{text-align:center;padding:20px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
 .why-card .icon{font-size:2.5rem;margin-bottom:12px}
 .why-card h3{color:var(--navy);margin-bottom:6px}
 .why-card p{font-size:.85rem;color:#666}
+
+.specials{background:var(--navy);color:#fff;padding:60px 20px}
+.specials h2{text-align:center;font-size:1.8rem;margin-bottom:40px}
+.specials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.special-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:24px;text-align:center}
+.special-card .tag{background:var(--gold);color:#111;font-weight:700;font-size:.75rem;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px}
+.special-card h3{font-size:1.1rem;margin-bottom:6px}
+.special-card p{font-size:.85rem;opacity:.8}
 
 .reviews{padding:60px 20px;max-width:900px;margin:0 auto}
 .reviews h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
@@ -52,20 +85,40 @@ header h1{font-size:1.3rem;font-weight:700}
 .review blockquote{font-style:italic;color:#555;margin-bottom:12px;line-height:1.5}
 .review cite{font-size:.85rem;color:#888;font-style:normal}
 
-.contact{padding:60px 20px;max-width:700px;margin:0 auto}
-.contact h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:8px}
-.contact .sub{text-align:center;color:#666;margin-bottom:32px}
+.quote-form{padding:60px 20px;background:var(--light)}
+.quote-form .inner{max-width:700px;margin:0 auto}
+.quote-form h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:8px}
+.quote-form .sub{text-align:center;color:#666;margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-group{margin-bottom:16px}
 .form-group label{display:block;font-weight:600;margin-bottom:4px;font-size:.9rem}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit}
 .form-group textarea{resize:vertical;min-height:100px}
+.form-group .hint{font-size:.75rem;color:#888;margin-top:2px}
 .submit-btn{background:var(--red);color:#fff;border:none;padding:16px 40px;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;width:100%;min-height:48px;transition:background .2s}
 .submit-btn:hover{background:#a93226}
+.form-note{text-align:center;font-size:.8rem;color:#888;margin-top:12px}
+.contact-alt{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+.contact-alt a{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;font-weight:600;font-size:.9rem;min-height:44px}
+.contact-alt .phone-link{background:var(--red);color:#fff}
+.contact-alt .sms-link{background:var(--green);color:#fff}
 
-.cta-section{background:var(--navy);color:#fff;padding:60px 20px;text-align:center}
+.faq{padding:60px 20px;max-width:800px;margin:0 auto}
+.faq h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:32px}
+.faq-item{border-bottom:1px solid #e0e0e0;padding:16px 0}
+.faq-item summary{cursor:pointer;font-weight:600;font-size:1rem;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:44px}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--gold)}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{padding-top:8px;color:#555;font-size:.9rem}
+
+.service-area{padding:40px 20px;text-align:center;background:var(--light)}
+.service-area h3{color:var(--navy);margin-bottom:12px}
+.service-area p{font-size:.9rem;color:#666;max-width:700px;margin:0 auto}
+
+.cta-section{background:linear-gradient(135deg,var(--navy),#2c3e50);color:#fff;padding:60px 20px;text-align:center}
 .cta-section h2{font-size:1.8rem;margin-bottom:12px}
 .cta-section p{opacity:.9;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
-.cta-section .call-btn{font-size:1.2rem;padding:16px 40px}
+.cta-section .cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 
 footer{background:#111;color:#888;text-align:center;padding:24px;font-size:.85rem}
 footer a{color:var(--gold)}
@@ -74,170 +127,406 @@ footer a{color:var(--gold)}
   .hero h2{font-size:1.5rem}
   header h1{font-size:1rem}
   .trust-badges{display:none}
+  .form-row{grid-template-columns:1fr}
+  .text-btn span.label{display:none}
 }
 </style>
 </head>
-<body>
+<body lang="en">
 
-<div class="top-bar">
-  <div class="trust-badges">
-    <span>ASE Certified</span>
-    <span>Family Owned</span>
-    <span>Georgetown Local</span>
-  </div>
-  <a href="tel:+15125085141">Open Mon-Sat &bull; (512) 508-5141</a>
+<!-- Language Toggle -->
+<div class="lang-bar">
+  <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+  <button id="btn-es" onclick="setLang('es')">Español</button>
 </div>
 
+<!-- Top Trust Bar -->
+<div class="top-bar">
+  <div class="trust-badges">
+    <span class="en-only">ASE Certified Technicians</span>
+    <span class="es-only">Técnicos Certificados ASE</span>
+    <span class="en-only">Family Owned &amp; Operated</span>
+    <span class="es-only">Negocio Familiar</span>
+    <span class="en-only">Uniformed &amp; ID-Badged Staff</span>
+    <span class="es-only">Personal Uniformado con Identificación</span>
+  </div>
+  <a href="tel:+15125085141">
+    <span class="en-only">Open Mon-Sat &bull; (512) 508-5141</span>
+    <span class="es-only">Abierto Lun-Sáb &bull; (512) 508-5141</span>
+  </a>
+</div>
+
+<!-- Sticky Header -->
 <header>
   <h1>Kevin's Auto Shop</h1>
-  <a href="tel:+15125085141" class="call-btn">📞 Call Now</a>
+  <div class="header-actions">
+    <a href="sms:+15125085141" class="text-btn">💬 <span class="label en-only">Text Us</span><span class="label es-only">Enviar Texto</span></a>
+    <a href="tel:+15125085141" class="call-btn">📞 <span class="en-only">Call Now</span><span class="es-only">Llamar</span></a>
+  </div>
 </header>
 
+<!-- Financing Bar -->
+<div class="financing-bar">
+  <span class="en-only">💳 Financing Available on Repairs Over $500 — Ask Us About Payment Plans</span>
+  <span class="es-only">💳 Financiamiento Disponible en Reparaciones Mayores a $500 — Pregunte por Planes de Pago</span>
+</div>
+
+<!-- Hero -->
 <section class="hero">
   <div class="stars">★★★★★</div>
-  <h2>Georgetown's Trusted Auto Repair Shop</h2>
-  <p>Honest work, fair prices, and your car done right the first time. Serving Georgetown and Williamson County families since day one.</p>
-  <a href="#contact" class="call-btn" style="font-size:1.1rem">Get a Free Estimate</a>
-  <a href="tel:+15125085141" class="call-btn" style="margin-left:12px;font-size:1.1rem">📞 (512) 508-5141</a>
+  <h2 class="en-only">Georgetown's Top-Rated Auto Repair — 4.9 Stars</h2>
+  <h2 class="es-only">El Taller Mecánico Mejor Calificado de Georgetown — 4.9 Estrellas</h2>
+  <p class="en-only">Honest work, fair prices, and your car done right the first time. Unlike the big chain shops, we're a family business — we know your name, explain what's wrong in plain English, and never sell you work you don't need.</p>
+  <p class="es-only">Trabajo honesto, precios justos y su carro reparado bien la primera vez. A diferencia de las cadenas grandes, somos un negocio familiar — lo conocemos por nombre, le explicamos qué pasa en palabras claras, y nunca le vendemos trabajo que no necesita.</p>
+  <div class="hero-ctas">
+    <a href="#quote" class="call-btn" style="font-size:1.1rem">
+      <span class="en-only">Get a Free Estimate</span>
+      <span class="es-only">Estimado Gratis</span>
+    </a>
+    <a href="tel:+15125085141" class="call-btn" style="font-size:1.1rem;background:var(--green)">📞 (512) 508-5141</a>
+    <a href="sms:+15125085141" class="text-btn" style="font-size:1.1rem">💬
+      <span class="en-only">Text for Appointment</span>
+      <span class="es-only">Texto para Cita</span>
+    </a>
+  </div>
   <div class="hero-badges">
-    <div>🔧 ASE Certified Techs</div>
-    <div>⭐ 4.9-Star Rated</div>
-    <div>🏠 Locally Owned</div>
-    <div>💰 Fair Pricing</div>
+    <div class="en-only">🔧 ASE Certified</div><div class="es-only">🔧 Certificado ASE</div>
+    <div>⭐ 4.9 Stars</div>
+    <div class="en-only">🏠 Family Owned</div><div class="es-only">🏠 Negocio Familiar</div>
+    <div class="en-only">📞 Real Person Answers</div><div class="es-only">📞 Persona Real Contesta</div>
   </div>
 </section>
 
+<!-- Specials / Promos -->
+<section class="specials">
+  <h2 class="en-only">Current Specials</h2>
+  <h2 class="es-only">Especiales del Mes</h2>
+  <div class="specials-grid">
+    <div class="special-card">
+      <div class="tag en-only">NEW CUSTOMER</div><div class="tag es-only">CLIENTE NUEVO</div>
+      <h3 class="en-only">$29.99 Oil Change</h3><h3 class="es-only">Cambio de Aceite $29.99</h3>
+      <p class="en-only">Conventional oil, filter, and 21-point inspection. First visit only.</p>
+      <p class="es-only">Aceite convencional, filtro e inspección de 21 puntos. Solo primera visita.</p>
+    </div>
+    <div class="special-card">
+      <div class="tag en-only">SAVE 10%</div><div class="tag es-only">AHORRE 10%</div>
+      <h3 class="en-only">10% Off Brake Service</h3><h3 class="es-only">10% de Descuento en Frenos</h3>
+      <p class="en-only">Pads, rotors, and fluid flush. Mention this offer when you call.</p>
+      <p class="es-only">Pastillas, rotores y cambio de líquido. Mencione esta oferta al llamar.</p>
+    </div>
+    <div class="special-card">
+      <div class="tag en-only">MILITARY &amp; SENIORS</div><div class="tag es-only">MILITARES Y MAYORES</div>
+      <h3 class="en-only">10% Off All Services</h3><h3 class="es-only">10% en Todos los Servicios</h3>
+      <p class="en-only">Active military, veterans, and seniors 65+. Thank you for your service.</p>
+      <p class="es-only">Militares activos, veteranos y mayores de 65+. Gracias por su servicio.</p>
+    </div>
+    <div class="special-card">
+      <div class="tag en-only">FREE</div><div class="tag es-only">GRATIS</div>
+      <h3 class="en-only">Free A/C Check</h3><h3 class="es-only">Revisión de A/C Gratis</h3>
+      <p class="en-only">Texas heat is brutal. Free A/C system diagnosis — no obligation.</p>
+      <p class="es-only">El calor de Texas es brutal. Diagnóstico de A/C gratis — sin compromiso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
 <section class="services">
-  <h2>What We Fix</h2>
+  <h2 class="en-only">What We Fix</h2>
+  <h2 class="es-only">Lo Que Reparamos</h2>
   <div class="svc-grid">
     <div class="svc-card">
       <div class="icon">🔧</div>
-      <h3>Brake Service</h3>
-      <p>Pads, rotors, brake fluid flush, and complete brake system inspections. Stop safe every time.</p>
+      <h3 class="en-only">Brake Service</h3><h3 class="es-only">Servicio de Frenos</h3>
+      <p class="en-only">Pads, rotors, brake fluid flush, and complete brake system inspections. We don't just slap on pads — we check the whole system so you stop safe.</p>
+      <p class="es-only">Pastillas, rotores, cambio de líquido de frenos e inspecciones completas del sistema. No solo ponemos pastillas — revisamos todo el sistema para que frene seguro.</p>
+      <div class="price-hint en-only">Starting at $189 per axle</div>
+      <div class="price-hint es-only">Desde $189 por eje</div>
     </div>
     <div class="svc-card">
       <div class="icon">🛢️</div>
-      <h3>Oil Changes</h3>
-      <p>Conventional, synthetic blend, and full synthetic. Multi-point inspection included with every oil change.</p>
+      <h3 class="en-only">Oil Changes</h3><h3 class="es-only">Cambio de Aceite</h3>
+      <p class="en-only">Conventional, synthetic blend, and full synthetic. Every oil change includes a 21-point inspection — we catch small problems before they become big bills.</p>
+      <p class="es-only">Convencional, semi-sintético y sintético completo. Cada cambio incluye inspección de 21 puntos — encontramos problemas pequeños antes de que sean cuentas grandes.</p>
+      <div class="price-hint en-only">From $29.99 (conventional)</div>
+      <div class="price-hint es-only">Desde $29.99 (convencional)</div>
     </div>
     <div class="svc-card">
       <div class="icon">❄️</div>
-      <h3>A/C & Heating</h3>
-      <p>A/C recharge, compressor repair, and heater core service. Texas heat is no joke — we keep you cool.</p>
+      <h3 class="en-only">A/C &amp; Heating</h3><h3 class="es-only">Aire Acondicionado y Calefacción</h3>
+      <p class="en-only">A/C recharge, compressor repair, heater core service. Georgetown hits 105° in August — we keep you cool. Unlike Sun Auto, we diagnose before we charge.</p>
+      <p class="es-only">Recarga de A/C, reparación de compresor, servicio de calefacción. Georgetown llega a 105°F en agosto — lo mantenemos fresco. A diferencia de otros talleres, diagnosticamos antes de cobrar.</p>
     </div>
     <div class="svc-card">
       <div class="icon">⚙️</div>
-      <h3>Engine Diagnostics</h3>
-      <p>Check engine light? We use dealer-grade scanners to find the real problem, not guess.</p>
+      <h3 class="en-only">Engine Diagnostics</h3><h3 class="es-only">Diagnóstico de Motor</h3>
+      <p class="en-only">Check engine light? We use dealer-grade OBD-II scanners to find the real problem — not guess, not clear the code and hope. Chains like Jiffy Lube will charge you $100 just to read it. We include diagnosis with any repair.</p>
+      <p class="es-only">¿Luz de check engine? Usamos escáneres OBD-II de nivel profesional para encontrar el problema real — no adivinamos. Las cadenas cobran $100 solo por leer el código. Nosotros incluimos el diagnóstico con cualquier reparación.</p>
     </div>
     <div class="svc-card">
       <div class="icon">🚗</div>
-      <h3>Transmission</h3>
-      <p>Fluid changes, filter replacement, and transmission rebuilds. Manual and automatic.</p>
+      <h3 class="en-only">Transmission</h3><h3 class="es-only">Transmisión</h3>
+      <p class="en-only">Fluid changes, filter replacement, and full rebuilds. Manual and automatic. We'll give you an honest assessment — if it can be serviced instead of replaced, we'll tell you.</p>
+      <p class="es-only">Cambio de fluido, reemplazo de filtro y reconstrucciones completas. Manual y automática. Le damos una evaluación honesta — si se puede reparar en vez de reemplazar, se lo decimos.</p>
     </div>
     <div class="svc-card">
       <div class="icon">🔋</div>
-      <h3>Electrical & Battery</h3>
-      <p>Alternators, starters, battery testing and replacement. Wiring diagnosis and repair.</p>
+      <h3 class="en-only">Electrical &amp; Battery</h3><h3 class="es-only">Eléctrico y Batería</h3>
+      <p class="en-only">Alternators, starters, battery testing and replacement, wiring repair. Free battery test — walk in anytime.</p>
+      <p class="es-only">Alternadores, arranques, prueba y reemplazo de batería, reparación de cableado. Prueba de batería gratis — venga cuando quiera.</p>
     </div>
   </div>
 </section>
 
+<!-- Competitive Edge -->
+<section class="competitive-edge">
+  <h2 class="en-only">Why Georgetown Picks Kevin's Over the Big Shops</h2>
+  <h2 class="es-only">Por Qué Georgetown Elige a Kevin's Sobre los Talleres Grandes</h2>
+  <p class="subtitle en-only">Here's how we stack up against the chains and dealerships in Williamson County.</p>
+  <p class="subtitle es-only">Así nos comparamos con las cadenas y concesionarios en el Condado de Williamson.</p>
+  <div class="compare-grid">
+    <div class="compare-card">
+      <div class="vs-icon">🏪</div>
+      <h3 class="en-only">vs. Sun Auto Service</h3><h3 class="es-only">vs. Sun Auto Service</h3>
+      <p class="them en-only">Long waits, upsells on services you don't need, impersonal chain experience</p>
+      <p class="them es-only">Largas esperas, le venden servicios innecesarios, experiencia impersonal</p>
+      <p class="us en-only">✓ Same-day service, honest recommendations, owner on-site daily</p>
+      <p class="us es-only">✓ Servicio el mismo día, recomendaciones honestas, dueño presente diario</p>
+    </div>
+    <div class="compare-card">
+      <div class="vs-icon">🏢</div>
+      <h3 class="en-only">vs. Dealership Service</h3><h3 class="es-only">vs. Servicio del Concesionario</h3>
+      <p class="them en-only">$150+/hour labor rates, 2-3 day waits, shuttle service instead of speed</p>
+      <p class="them es-only">$150+/hora de mano de obra, espera de 2-3 días</p>
+      <p class="us en-only">✓ 30-50% less on labor, same-day turnaround, ASE-certified on all makes</p>
+      <p class="us es-only">✓ 30-50% menos en mano de obra, servicio el mismo día, certificados ASE en todas las marcas</p>
+    </div>
+    <div class="compare-card">
+      <div class="vs-icon">⛽</div>
+      <h3 class="en-only">vs. Jiffy Lube / Valvoline</h3><h3 class="es-only">vs. Jiffy Lube / Valvoline</h3>
+      <p class="them en-only">Oil changes only, $100 diagnostic fee, pressure to add unnecessary flushes</p>
+      <p class="them es-only">Solo cambios de aceite, $100 por diagnóstico, presión para agregar servicios innecesarios</p>
+      <p class="us en-only">✓ Full-service shop, free diagnosis with repair, no pressure upsells</p>
+      <p class="us es-only">✓ Taller de servicio completo, diagnóstico gratis con reparación, sin presión</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Signals -->
 <section class="why">
-  <h2>Why Georgetown Trusts Kevin's</h2>
+  <h2 class="en-only">Why Families Trust Kevin's</h2>
+  <h2 class="es-only">Por Qué las Familias Confían en Kevin's</h2>
   <div class="why-grid">
     <div class="why-card">
       <div class="icon">⭐</div>
-      <h3>4.9-Star Rating</h3>
-      <p>Hundreds of five-star reviews from real Georgetown customers.</p>
+      <h3 class="en-only">4.9-Star Rating</h3><h3 class="es-only">Calificación de 4.9 Estrellas</h3>
+      <p class="en-only">Hundreds of 5-star reviews from real Georgetown families.</p>
+      <p class="es-only">Cientos de reseñas de 5 estrellas de familias reales de Georgetown.</p>
     </div>
     <div class="why-card">
-      <div class="icon">💬</div>
-      <h3>Honest Quotes</h3>
-      <p>We tell you what's wrong, what it costs, and let you decide. No pressure, no upsells.</p>
+      <div class="icon">👔</div>
+      <h3 class="en-only">Uniformed &amp; ID-Badged</h3><h3 class="es-only">Uniformados con Identificación</h3>
+      <p class="en-only">Every tech wears a uniform and carries a photo ID. You know exactly who's working on your car.</p>
+      <p class="es-only">Cada técnico usa uniforme y porta identificación con foto. Usted sabe exactamente quién trabaja en su carro.</p>
     </div>
     <div class="why-card">
-      <div class="icon">🔧</div>
-      <h3>ASE Certified</h3>
-      <p>Our technicians are ASE certified and trained on all makes and models.</p>
+      <div class="icon">📞</div>
+      <h3 class="en-only">A Real Person Answers</h3><h3 class="es-only">Una Persona Real Contesta</h3>
+      <p class="en-only">No phone tree. No "press 1 for…". Call and a real person picks up.</p>
+      <p class="es-only">Sin menú telefónico. Sin "presione 1 para…". Llame y una persona real contesta.</p>
     </div>
     <div class="why-card">
-      <div class="icon">🤝</div>
-      <h3>Family Owned</h3>
-      <p>Not a chain. We know your name and treat your car like our own.</p>
+      <div class="icon">🛡️</div>
+      <h3 class="en-only">Satisfaction Guaranteed</h3><h3 class="es-only">Satisfacción Garantizada</h3>
+      <p class="en-only">If you're not happy with the work, we make it right. 12-month / 12,000-mile warranty on all repairs.</p>
+      <p class="es-only">Si no está contento con el trabajo, lo corregimos. Garantía de 12 meses / 12,000 millas en todas las reparaciones.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🗣️</div>
+      <h3 class="en-only">Se Habla Español</h3><h3 class="es-only">Se Habla Español</h3>
+      <p class="en-only">Bilingual staff on site. We'll explain your repair in your language.</p>
+      <p class="es-only">Personal bilingüe en el taller. Le explicamos su reparación en su idioma.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">💰</div>
+      <h3 class="en-only">Upfront Pricing</h3><h3 class="es-only">Precios Transparentes</h3>
+      <p class="en-only">Written estimate before we start. No hidden fees. No surprises on the bill.</p>
+      <p class="es-only">Estimado por escrito antes de empezar. Sin cargos ocultos. Sin sorpresas en la cuenta.</p>
     </div>
   </div>
 </section>
 
+<!-- Reviews -->
 <section class="reviews">
-  <h2>What Our Customers Say</h2>
+  <h2 class="en-only">What Our Customers Say</h2>
+  <h2 class="es-only">Lo Que Dicen Nuestros Clientes</h2>
   <div class="review-grid">
     <div class="review">
       <div class="stars">★★★★★</div>
-      <blockquote>"Kevin and his team are honest, thorough, and always get the job done right. I won't take my truck anywhere else."</blockquote>
+      <blockquote class="en-only">"Kevin and his team are honest, thorough, and always get the job done right. The dealership wanted $1,200 for my brake job — Kevin did it for $650 with better parts. I won't take my truck anywhere else."</blockquote>
+      <blockquote class="es-only">"Kevin y su equipo son honestos, meticulosos y siempre hacen bien el trabajo. El concesionario quería $1,200 por mis frenos — Kevin lo hizo por $650 con mejores piezas. No llevo mi camioneta a otro lado."</blockquote>
       <cite>— James R., Georgetown, TX</cite>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
-      <blockquote>"Had a check engine light and they diagnosed it same day. Fair price, no surprises. Been coming back for three years now."</blockquote>
+      <blockquote class="en-only">"Had a check engine light and two other shops couldn't figure it out. Kevin diagnosed it same day — bad O2 sensor. Fair price, no surprises. Been coming back for three years."</blockquote>
+      <blockquote class="es-only">"Tenía la luz de check engine y dos talleres no pudieron encontrar el problema. Kevin lo diagnosticó el mismo día — sensor de O2 malo. Precio justo, sin sorpresas. He regresado por tres años."</blockquote>
       <cite>— Maria G., Round Rock, TX</cite>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
-      <blockquote>"My A/C died in July. They squeezed me in same day and had it blowing cold by afternoon. These guys are the real deal."</blockquote>
+      <blockquote class="en-only">"My A/C died in July. They squeezed me in same day and had it blowing cold by afternoon. These guys are the real deal. Saved me from Sun Auto's $2,000 quote with a $450 fix."</blockquote>
+      <blockquote class="es-only">"Mi aire acondicionado murió en julio. Me atendieron el mismo día y para la tarde estaba funcionando. Estos tipos son de verdad. Me ahorraron del presupuesto de $2,000 de Sun Auto con una reparación de $450."</blockquote>
       <cite>— David L., Georgetown, TX</cite>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Request a Free Estimate</h2>
-  <p class="sub">Tell us about your vehicle and we'll get back to you same day.</p>
-  <form action="#" onsubmit="return false">
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="John Smith">
+<!-- Quote Request Form -->
+<section class="quote-form" id="quote">
+  <div class="inner">
+    <h2 class="en-only">Request a Free Estimate</h2>
+    <h2 class="es-only">Solicite un Estimado Gratis</h2>
+    <p class="sub en-only">Tell us about your vehicle and we'll get back to you same day. Prefer texting? Send us a message at (512) 508-5141.</p>
+    <p class="sub es-only">Cuéntenos sobre su vehículo y le responderemos el mismo día. ¿Prefiere mensajes de texto? Envíenos un mensaje al (512) 508-5141.</p>
+    <form action="#" onsubmit="return false">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name" class="en-only">Your Name</label>
+          <label for="name" class="es-only">Su Nombre</label>
+          <input type="text" id="name" placeholder="John Smith">
+        </div>
+        <div class="form-group">
+          <label for="phone" class="en-only">Phone Number</label>
+          <label for="phone" class="es-only">Número de Teléfono</label>
+          <input type="tel" id="phone" placeholder="(512) 555-1234">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="vehicle" class="en-only">Year / Make / Model</label>
+          <label for="vehicle" class="es-only">Año / Marca / Modelo</label>
+          <input type="text" id="vehicle" placeholder="2019 Toyota Tacoma">
+        </div>
+        <div class="form-group">
+          <label for="contact-pref" class="en-only">Preferred Contact</label>
+          <label for="contact-pref" class="es-only">Contacto Preferido</label>
+          <select id="contact-pref">
+            <option value="call" class="en-only">Phone Call</option>
+            <option value="call" class="es-only">Llamada</option>
+            <option value="text" class="en-only">Text / SMS</option>
+            <option value="text" class="es-only">Texto / SMS</option>
+            <option value="email">Email</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="service" class="en-only">What do you need?</label>
+        <label for="service" class="es-only">¿Qué necesita?</label>
+        <select id="service">
+          <option value="" class="en-only">Select a service...</option>
+          <option value="" class="es-only">Seleccione un servicio...</option>
+          <option>Oil Change / Cambio de Aceite</option>
+          <option>Brake Service / Frenos</option>
+          <option>A/C Repair / Aire Acondicionado</option>
+          <option>Engine Diagnostics / Diagnóstico de Motor</option>
+          <option>Transmission / Transmisión</option>
+          <option>Electrical &amp; Battery / Eléctrico y Batería</option>
+          <option>State Inspection / Inspección</option>
+          <option>Other / Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="details" class="en-only">Describe the issue</label>
+        <label for="details" class="es-only">Describa el problema</label>
+        <textarea id="details" placeholder="What's going on? When did it start? / ¿Qué pasa? ¿Cuándo empezó?"></textarea>
+        <div class="hint en-only">The more details, the more accurate your estimate.</div>
+        <div class="hint es-only">Entre más detalles, más preciso su estimado.</div>
+      </div>
+      <button type="submit" class="submit-btn">
+        <span class="en-only">Get My Free Estimate →</span>
+        <span class="es-only">Obtener Mi Estimado Gratis →</span>
+      </button>
+      <div class="form-note en-only">We respond to every request same day. No spam, no obligation.</div>
+      <div class="form-note es-only">Respondemos cada solicitud el mismo día. Sin spam, sin compromiso.</div>
+    </form>
+    <div class="contact-alt">
+      <a href="tel:+15125085141" class="phone-link">📞 <span class="en-only">Call (512) 508-5141</span><span class="es-only">Llamar (512) 508-5141</span></a>
+      <a href="sms:+15125085141" class="sms-link">💬 <span class="en-only">Text Us Instead</span><span class="es-only">Enviar Texto</span></a>
     </div>
-    <div class="form-group">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="(512) 555-1234">
-    </div>
-    <div class="form-group">
-      <label for="service">What do you need?</label>
-      <select id="service">
-        <option value="">Select a service...</option>
-        <option>Oil Change</option>
-        <option>Brake Service</option>
-        <option>A/C Repair</option>
-        <option>Engine Diagnostics (Check Engine Light)</option>
-        <option>Transmission Service</option>
-        <option>Electrical / Battery</option>
-        <option>State Inspection</option>
-        <option>Other — describe below</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="vehicle">Year / Make / Model</label>
-      <input type="text" id="vehicle" placeholder="2019 Toyota Tacoma">
-    </div>
-    <div class="form-group">
-      <label for="details">Anything else?</label>
-      <textarea id="details" placeholder="Describe the issue or what you need..."></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Get My Free Estimate →</button>
-  </form>
+  </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq">
+  <h2 class="en-only">Frequently Asked Questions</h2>
+  <h2 class="es-only">Preguntas Frecuentes</h2>
+  <details class="faq-item">
+    <summary class="en-only">Do you work on all makes and models?</summary>
+    <summary class="es-only">¿Trabajan en todas las marcas y modelos?</summary>
+    <p class="en-only">Yes. Our ASE-certified technicians work on all domestic, Asian, and European vehicles — Ford, Chevy, Toyota, Honda, BMW, you name it.</p>
+    <p class="es-only">Sí. Nuestros técnicos certificados ASE trabajan en todos los vehículos domésticos, asiáticos y europeos — Ford, Chevy, Toyota, Honda, BMW, lo que sea.</p>
+  </details>
+  <details class="faq-item">
+    <summary class="en-only">Do you offer financing?</summary>
+    <summary class="es-only">¿Ofrecen financiamiento?</summary>
+    <p class="en-only">Yes. We offer payment plans on repairs over $500. No credit check required for qualified customers. Ask us about our options when you come in.</p>
+    <p class="es-only">Sí. Ofrecemos planes de pago en reparaciones mayores a $500. No se requiere revisión de crédito para clientes calificados. Pregunte por nuestras opciones cuando nos visite.</p>
+  </details>
+  <details class="faq-item">
+    <summary class="en-only">What's your warranty?</summary>
+    <summary class="es-only">¿Cuál es su garantía?</summary>
+    <p class="en-only">12 months or 12,000 miles on all repairs — whichever comes first. If something isn't right, bring it back and we fix it at no charge.</p>
+    <p class="es-only">12 meses o 12,000 millas en todas las reparaciones — lo que ocurra primero. Si algo no está bien, tráigalo de vuelta y lo arreglamos sin cargo.</p>
+  </details>
+  <details class="faq-item">
+    <summary class="en-only">How long will my repair take?</summary>
+    <summary class="es-only">¿Cuánto tardará mi reparación?</summary>
+    <p class="en-only">Most repairs are same-day. Oil changes take about 30 minutes. Brakes and diagnostics typically 2-4 hours. Major engine or transmission work may need 1-2 days. We'll give you an honest timeline upfront.</p>
+    <p class="es-only">La mayoría de reparaciones son el mismo día. Cambios de aceite toman unos 30 minutos. Frenos y diagnósticos típicamente 2-4 horas. Trabajo mayor de motor o transmisión puede necesitar 1-2 días. Le damos un tiempo honesto desde el principio.</p>
+  </details>
+  <details class="faq-item">
+    <summary class="en-only">Do you offer rides while my car is being worked on?</summary>
+    <summary class="es-only">¿Ofrecen transporte mientras trabajan en mi carro?</summary>
+    <p class="en-only">We offer local drop-off and pick-up within Georgetown for customers whose repairs take more than a few hours. Just ask when you schedule.</p>
+    <p class="es-only">Ofrecemos transporte local dentro de Georgetown para clientes cuyas reparaciones toman más de unas horas. Solo pregunte cuando agende.</p>
+  </details>
+</section>
+
+<!-- Service Area -->
+<section class="service-area">
+  <h3 class="en-only">Serving Georgetown &amp; All of Williamson County</h3>
+  <h3 class="es-only">Sirviendo a Georgetown y Todo el Condado de Williamson</h3>
+  <p class="en-only">Georgetown &bull; Round Rock &bull; Cedar Park &bull; Leander &bull; Hutto &bull; Liberty Hill &bull; Jarrell &bull; Taylor &bull; Florence</p>
+  <p class="es-only">Georgetown &bull; Round Rock &bull; Cedar Park &bull; Leander &bull; Hutto &bull; Liberty Hill &bull; Jarrell &bull; Taylor &bull; Florence</p>
+</section>
+
+<!-- Bottom CTA -->
 <section class="cta-section">
-  <h2>Ready to Get Your Car Fixed Right?</h2>
-  <p>Honest pricing. ASE certified techs. Georgetown's top-rated auto repair.</p>
-  <a href="tel:+15125085141" class="call-btn">📞 Call (512) 508-5141</a>
+  <h2 class="en-only">Ready to Get Your Car Fixed Right?</h2>
+  <h2 class="es-only">¿Listo para Reparar su Carro Bien?</h2>
+  <p class="en-only">Honest pricing. ASE certified. 4.9 stars. Family owned. Financing available.</p>
+  <p class="es-only">Precios honestos. Certificados ASE. 4.9 estrellas. Negocio familiar. Financiamiento disponible.</p>
+  <div class="cta-row">
+    <a href="tel:+15125085141" class="call-btn" style="font-size:1.2rem;padding:16px 40px">📞 (512) 508-5141</a>
+    <a href="sms:+15125085141" class="text-btn" style="font-size:1.2rem;padding:16px 40px">💬 <span class="en-only">Text Us</span><span class="es-only">Texto</span></a>
+  </div>
 </section>
 
 <footer>
   Kevin's Auto Shop &bull; Georgetown, TX &bull; <a href="tel:+15125085141">(512) 508-5141</a><br>
-  Mon-Fri 8am-6pm &bull; Sat 8am-2pm &bull; Closed Sunday
+  <span class="en-only">Mon-Fri 8am-6pm &bull; Sat 8am-2pm &bull; Closed Sunday</span>
+  <span class="es-only">Lun-Vie 8am-6pm &bull; Sáb 8am-2pm &bull; Cerrado Domingo</span>
 </footer>
+
+<script>
+function setLang(lang){
+  document.body.setAttribute('lang',lang);
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  document.getElementById('btn-es').classList.toggle('active',lang==='es');
+  try{localStorage.setItem('lang',lang)}catch(e){}
+}
+try{var saved=localStorage.getItem('lang');if(saved)setLang(saved)}catch(e){}
+</script>
 
 </body>
 </html>
