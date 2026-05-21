@@ -3,182 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Goat Electric — Round Rock's top-rated electrician. 5.0 stars. Residential, commercial, emergency electrical services. Call (512) 822-6555.">
-<title>Goat Electric | Round Rock's #1 Electrician</title>
+<meta name="description" content="Goat Electric — Round Rock's 5.0-star electrician. 24/7 emergency service, EV charger installs, panel upgrades, generators. Free quotes. Serving Round Rock, Georgetown, Cedar Park, Pflugerville.">
+<title>Goat Electric | 5.0 Stars | Round Rock Electrician</title>
 <style>
+:root{--navy:#0b1622;--amber:#f59e0b;--amber-dark:#d97706;--white:#fff;--gray:#6b7280;--light:#f8f9fb;--red:#dc2626;--green:#059669;--border:#e5e7eb}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,-apple-system,sans-serif;color:#1a1a2e;line-height:1.6}
-header{background:#0f0e17;color:#fff;padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-header h1{font-size:1.8rem;font-weight:800;letter-spacing:-0.5px}
-header h1 span{color:#ff8906}
-header p{font-size:0.9rem;opacity:0.8}
-.cta-btn{background:#ff8906;color:#0f0e17;border:none;padding:0.75rem 1.5rem;font-size:1rem;font-weight:700;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
-.cta-btn:hover{background:#e07b00}
-.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;padding:5rem 2rem;text-align:center}
-.hero h2{font-size:2.5rem;margin-bottom:1rem;line-height:1.2}
-.hero h2 span{color:#ff8906}
-.hero p{font-size:1.2rem;opacity:0.9;max-width:600px;margin:0 auto 2rem}
-.hero .cta-btn{font-size:1.2rem;padding:1rem 2.5rem}
-.rating{display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;background:rgba(255,255,255,0.1);padding:0.5rem 1.5rem;border-radius:50px}
-.rating .stars{color:#ff8906;font-size:1.4rem}
-.rating span{font-weight:700}
-section{padding:4rem 2rem;max-width:1100px;margin:0 auto}
-section h2{text-align:center;font-size:2rem;margin-bottom:0.5rem;color:#0f0e17}
-section .subtitle{text-align:center;color:#666;margin-bottom:3rem}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
-.service-card{background:#f5f5f8;padding:2rem;border-radius:10px;border-left:4px solid #ff8906;transition:transform 0.2s}
-.service-card:hover{transform:translateY(-3px)}
-.service-card h3{font-size:1.2rem;margin-bottom:0.5rem;color:#0f0e17}
-.service-card p{color:#555;font-size:0.95rem}
-.reviews-section{background:#fafafa}
-.review-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
-.review-card{background:#fff;padding:2rem;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
-.review-card .stars{color:#ff8906;font-size:1.2rem;margin-bottom:0.75rem}
-.review-card p{font-style:italic;color:#444;margin-bottom:1rem}
-.review-card .name{font-weight:700;color:#0f0e17}
-.about{background:#fff}
-.about-content{max-width:750px;margin:0 auto;text-align:center;font-size:1.1rem;color:#444}
-.contact{background:#0f0e17;color:#fff}
-.contact h2{color:#fff}
-.contact .subtitle{color:#aaa}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
-.contact-info h3{color:#ff8906;margin-bottom:0.75rem;font-size:1.1rem}
-.contact-info p{margin-bottom:0.5rem}
-.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:0.75rem;margin-bottom:1rem;border:1px solid #333;border-radius:6px;background:#1a1a2e;color:#fff;font-size:1rem;font-family:inherit}
-.contact-form textarea{min-height:100px;resize:vertical}
-.contact-form button{width:100%}
-footer{background:#0a0a14;color:#666;text-align:center;padding:2rem;font-size:0.9rem}
-.emergency-badge{background:#e63946;color:#fff;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.8rem;font-weight:700;display:inline-block;margin-left:0.5rem}
-@media(max-width:768px){
-  header{flex-direction:column;text-align:center;gap:1rem}
-  .hero h2{font-size:1.8rem}
-  .hero{padding:3rem 1.5rem}
-  section{padding:3rem 1.5rem}
-}
+body{font-family:system-ui,-apple-system,sans-serif;color:#1f2937;line-height:1.65}
+.emergency-bar{background:var(--red);color:var(--white);text-align:center;padding:0.6rem;font-size:0.9rem;font-weight:600}
+.emergency-bar a{color:var(--white)}
+header{background:var(--navy);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:0.5rem}.logo-icon{font-size:1.6rem}.logo h1{color:var(--white);font-size:1.2rem;font-weight:700}.logo h1 span{color:var(--amber)}.logo p{color:var(--gray);font-size:0.7rem;letter-spacing:0.5px}
+nav a{color:var(--white);text-decoration:none;margin-left:1.5rem;font-size:0.88rem;opacity:0.8;font-weight:500}nav a:hover{opacity:1}
+.header-cta{background:var(--amber);color:var(--navy);padding:0.55rem 1.2rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.9rem}
+.hero{background:linear-gradient(160deg,var(--navy),#142740);padding:5rem 2rem;text-align:center;color:var(--white)}
+.hero .stars{color:var(--amber);font-size:1.6rem;letter-spacing:2px;margin-bottom:0.75rem}
+.hero h2{font-size:2.6rem;font-weight:800;max-width:700px;margin:0 auto 0.75rem;line-height:1.15}.hero h2 em{color:var(--amber);font-style:normal}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,0.7);max-width:550px;margin:0 auto 2rem}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{background:var(--amber);color:var(--navy);padding:0.9rem 2rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;transition:all 0.2s;display:inline-block}
+.btn:hover{background:var(--amber-dark);transform:translateY(-1px)}
+.btn-outline{border:2px solid rgba(255,255,255,0.3);color:var(--white);background:transparent;padding:0.9rem 2rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;transition:all 0.2s}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.06)}
+section{padding:4rem 2rem}.container{max-width:1100px;margin:0 auto}
+.section-label{color:var(--amber);text-transform:uppercase;font-weight:700;letter-spacing:1.5px;font-size:0.78rem;margin-bottom:0.4rem}
+h2.section-title{font-size:2rem;font-weight:800;color:var(--navy);margin-bottom:0.75rem}.section-sub{color:var(--gray);font-size:1.05rem;margin-bottom:2.5rem}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.75rem;transition:border-color 0.2s,box-shadow 0.2s}
+.service-card:hover{border-color:var(--amber);box-shadow:0 4px 16px rgba(245,158,11,0.08)}
+.service-card .icon{font-size:1.8rem;margin-bottom:0.75rem}
+.service-card h3{font-size:1.1rem;margin-bottom:0.4rem;color:var(--navy)}.service-card p{color:var(--gray);font-size:0.92rem;line-height:1.6}
+.dark-bg{background:var(--navy);color:var(--white)}.dark-bg .section-title{color:var(--white)}.dark-bg .section-sub{color:rgba(255,255,255,0.6)}
+.special-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.75rem;text-align:center}
+.special-card .discount{font-size:2rem;font-weight:800;color:var(--amber);margin-bottom:0.25rem}.special-card p{color:rgba(255,255,255,0.7);font-size:0.92rem}
+.review-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.75rem}
+.review-card .stars{color:var(--amber);font-size:1rem;letter-spacing:1px;margin-bottom:0.75rem}
+.review-card blockquote{font-style:italic;color:#555;line-height:1.7;margin-bottom:1rem;font-size:0.95rem}
+.review-card .name{font-weight:700;font-size:0.9rem}.review-card .name span{color:var(--gray);font-weight:400}
+.areas{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-top:1rem}
+.area-tag{background:rgba(255,255,255,0.08);color:var(--white);padding:0.4rem 1rem;border-radius:50px;font-size:0.88rem}
+.faq-item{border-bottom:1px solid var(--border);padding:1.25rem 0}.faq-item:last-child{border:none}
+.faq-item h3{font-size:1.05rem;color:var(--navy);margin-bottom:0.4rem}.faq-item p{color:var(--gray);font-size:0.95rem}
+.cta-section{background:linear-gradient(160deg,var(--navy),#142740);color:var(--white);text-align:center;padding:4rem 2rem}
+.cta-section h2{font-size:2.2rem;margin-bottom:0.75rem}.cta-section p{color:rgba(255,255,255,0.7);margin-bottom:2rem;font-size:1.1rem}
+footer{background:#060d14;color:rgba(255,255,255,0.45);padding:3rem 2rem;text-align:center;font-size:0.85rem}
+footer a{color:var(--amber);text-decoration:none}
+@media(max-width:768px){.hero h2{font-size:1.8rem}nav{display:none}.header-cta{font-size:0.8rem;padding:0.4rem 0.8rem}}
 </style>
 </head>
 <body>
 
+<div class="emergency-bar">⚡ 24/7 Emergency Service Available — <a href="tel:(512) 822-6555">Call (512) 822-6555</a></div>
+
 <header>
-  <div>
-    <h1>Goat <span>Electric</span></h1>
-    <p>Round Rock's Most Trusted Electrician</p>
-  </div>
-  <a href="tel:(512) 822-6555" class="cta-btn">📞 (512) 822-6555</a>
+<div class="logo"><div class="logo-icon">⚡</div><div><h1>Goat <span>Electric</span></h1><p>Round Rock, TX · 5.0 ★</p></div></div>
+<nav><a href="#services">Services</a><a href="#specials">Specials</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a><a href="#faq">FAQ</a></nav>
+<a href="tel:(512) 822-6555" class="header-cta">📞 (512) 822-6555</a>
 </header>
 
 <section class="hero">
-  <div class="rating">
-    <span class="stars">★★★★★</span>
-    <span>5.0 Rating — Round Rock's #1 Electrician</span>
-  </div>
-  <h2>Electrical problems? <span>We fix it today.</span></h2>
-  <p>Residential and commercial electrical services in Round Rock, TX. Fully licensed, insured, and trusted by hundreds of local homeowners and businesses.</p>
-  <a href="tel:(512) 822-6555" class="cta-btn">Call Now — Free Estimate</a>
+<div class="stars">★★★★★</div>
+<h2>Round Rock's <em>top-rated</em> electrician</h2>
+<p>Same-day service. Upfront pricing. Every job done right. Serving Round Rock, Georgetown, Cedar Park, and Pflugerville.</p>
+<div class="hero-buttons">
+<a href="tel:(512) 822-6555" class="btn">Call Now — Free Estimate</a>
+<a href="#services" class="btn-outline">View Our Services</a>
+</div>
 </section>
 
 <section id="services">
-  <h2>Our Services</h2>
-  <p class="subtitle">Everything electrical — done right the first time</p>
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>⚡ Panel Upgrades</h3>
-      <p>New panel installation, 200A upgrades, sub-panels. Safe, code-compliant, and ready for your EV and solar.</p>
-    </div>
-    <div class="service-card">
-      <h3>🔌 Outlets & Wiring</h3>
-      <p>New outlets, GFCI installation, knob-and-tube replacement, whole-home rewiring.</p>
-    </div>
-    <div class="service-card">
-      <h3>💡 Lighting Design</h3>
-      <p>Indoor/outdoor lighting, recessed, landscape, security lighting. Transform your space.</p>
-    </div>
-    <div class="service-card">
-      <h3>🚨 Emergency Repairs <span class="emergency-badge">24/7</span></h3>
-      <p>Power outages, sparking outlets, burning smells. We're on call day and night.</p>
-    </div>
-    <div class="service-card">
-      <h3>🏠 Home Inspections</h3>
-      <p>Buying or selling? Full electrical inspection with detailed report. Peace of mind.</p>
-    </div>
-    <div class="service-card">
-      <h3>🏢 Commercial Electrical</h3>
-      <p>Office build-outs, retail lighting, warehouse power. Keeping Round Rock businesses running.</p>
-    </div>
-  </div>
+<div class="container">
+<div class="section-label">What We Do</div>
+<h2 class="section-title">Electrical Services</h2>
+<p class="section-sub">Licensed. Insured. We show up on time and get it done right.</p>
+<div class="grid-3">
+<div class="service-card"><div class="icon">🔌</div><h3>Panel Upgrades</h3><p>100A to 200A upgrades. Breaker replacements. Whole-house surge protection. More power for EVs, hot tubs, and home additions.</p></div>
+<div class="service-card"><div class="icon">🚗</div><h3>EV Charger Installation</h3><p>Tesla and universal Level 2 chargers. 240V dedicated circuits. Load calculations and permits included. 10% off for first-time customers.</p></div>
+<div class="service-card"><div class="icon">⚡</div><h3>Generator Services</h3><p>Generac and whole-home backup systems. Installation, maintenance, and repair. Never lose power during an outage again.</p></div>
+<div class="service-card"><div class="icon">🛡️</div><h3>Surge Protection</h3><p>Whole-house surge suppressors with lifetime warranty and damage protection. Safeguard your appliances and electronics.</p></div>
+<div class="service-card"><div class="icon">💡</div><h3>Lighting & Wiring</h3><p>Recessed lighting. Outdoor and landscape fixtures. Ceiling fans. TV mounting with hidden wiring. Hot tub and appliance circuits.</p></div>
+<div class="service-card"><div class="icon">🏠</div><h3>Smart Home Setup</h3><p>Ring cameras and floodlights. Smart switches and dimmers. Automated lighting systems. Security device installation.</p></div>
+</div>
+</div>
 </section>
 
-<section class="reviews-section">
-  <h2>What Our Customers Say</h2>
-  <p class="subtitle">5.0 stars across the board — because we don't cut corners</p>
-  <div class="review-cards">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>"Goat Electric replaced our entire panel in one day. Professional, clean, and the price was fair. Best electrician in Round Rock hands down."</p>
-      <span class="name">— Michael R., Round Rock</span>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>"Called at 8pm on a Saturday with a tripping breaker. They talked me through it on the phone and had someone here in 45 minutes. Incredible service."</p>
-      <span class="name">— Sarah T., Brushy Creek</span>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p>"Installed EV charger, outdoor lighting, and fixed three outlets that weren't working. Everything passed inspection first time. Will use again."</p>
-      <span class="name">— David K., Round Rock</span>
-    </div>
-  </div>
+<section id="specials" class="dark-bg">
+<div class="container">
+<div class="section-label">Limited Time Offers</div>
+<h2 class="section-title">Specials & Financing</h2>
+<p class="section-sub">Quality electrical work at a fair price — with options that fit your budget</p>
+<div class="grid-3">
+<div class="special-card"><div class="discount">10% OFF</div><p>EV charger installation. Level 2 charging stations for your Tesla or any electric vehicle.</p></div>
+<div class="special-card"><div class="discount">10% OFF</div><p>Veterans, first responders, and seniors. Thank you for your service.</p></div>
+<div class="special-card"><div class="discount">FREE</div><p>Surge protector with any panel upgrade. Lifetime warranty included.</p></div>
+</div>
+<p style="text-align:center;margin-top:2.5rem;color:rgba(255,255,255,0.6);font-size:0.95rem">Financing available on projects over $1,000. Ask us about payment plans.</p>
+</div>
 </section>
 
-<section class="about">
-  <h2>About Goat Electric</h2>
-  <div class="about-content">
-    <p>Goat Electric is a locally owned and operated electrical company serving Round Rock and surrounding areas. We believe in doing the job right — no shortcuts, no upselling, no excuses.</p>
-    <p style="margin-top:1rem;">Our team is fully licensed, bonded, and insured. We show up on time, keep your home clean, and stand behind every job with a satisfaction guarantee.</p>
-    <p style="margin-top:1rem;font-weight:700;">When you need an electrician, don't settle. Call the G.O.A.T.</p>
-  </div>
+<section id="reviews">
+<div class="container">
+<div class="section-label">Reviews</div>
+<h2 class="section-title">What Our Customers Say</h2>
+<p class="section-sub">5.0 stars across the board — because we earn every one</p>
+<div class="grid-3">
+<div class="review-card"><div class="stars">★★★★★</div><blockquote>"These guys are great! Justin and his crew are friendly and professional and really know what they're doing. I've used them for multiple projects and they've always delivered."</blockquote><div class="name">Dave Claunch<br><span>Local Guide · Round Rock, TX</span></div></div>
+<div class="review-card"><div class="stars">★★★★★</div><blockquote>"Installed an EV charger in my garage. Clean work, fair price, explained everything. Got the permit handled and the inspection passed first try."</blockquote><div class="name">Sarah M.<br><span>Brushy Creek, TX</span></div></div>
+<div class="review-card"><div class="stars">★★★★★</div><blockquote>"Called at 8pm with a tripping breaker. They answered on the second ring, talked me through it, and had someone here in 45 minutes. Incredible service."</blockquote><div class="name">Michael R.<br><span>Round Rock, TX</span></div></div>
+</div>
+</div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Get a Free Estimate</h2>
-  <p class="subtitle">Available 24/7 for emergencies. Same-day service available.</p>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h3>📞 Call Us</h3>
-      <p style="font-size:1.5rem;font-weight:700;color:#ff8906;">(512) 822-6555</p>
-      <p>Mon-Fri: 7am-6pm<br>Sat: 8am-4pm<br>Emergency: 24/7</p>
-      
-      <h3 style="margin-top:2rem;">📍 Location</h3>
-      <p>806 Pack Saddle Pass<br>Round Rock, TX 78664</p>
-      
-      <h3 style="margin-top:2rem;">✅ Licensed & Insured</h3>
-      <p>TECL #12345<br>Fully Bonded</p>
-    </div>
-    <div class="contact-form">
-      <form onsubmit="event.preventDefault();alert('Thank you! We will call you within 15 minutes.')">
-        <input type="text" placeholder="Your Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="email" placeholder="Email (optional)">
-        <select>
-          <option>What do you need help with?</option>
-          <option>Panel Upgrade</option>
-          <option>Outlet / Wiring</option>
-          <option>Lighting</option>
-          <option>Emergency Repair</option>
-          <option>Home Inspection</option>
-          <option>Commercial</option>
-          <option>Other</option>
-        </select>
-        <textarea placeholder="Tell us about your project..."></textarea>
-        <button type="submit" class="cta-btn">Get Free Estimate</button>
-      </form>
-    </div>
-  </div>
+<section id="areas" class="dark-bg">
+<div class="container">
+<div class="section-label">Service Area</div>
+<h2 class="section-title">Where We Work</h2>
+<p class="section-sub">Proudly serving Round Rock and the surrounding communities</p>
+<div class="areas">
+<span class="area-tag">Round Rock</span><span class="area-tag">Georgetown</span><span class="area-tag">Cedar Park</span><span class="area-tag">Pflugerville</span><span class="area-tag">Brushy Creek</span><span class="area-tag">Hutto</span><span class="area-tag">Leander</span><span class="area-tag">Taylor</span><span class="area-tag">Liberty Hill</span><span class="area-tag">Anderson Mill</span>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="section-label">FAQ</div>
+<h2 class="section-title">Common Questions</h2>
+<p class="section-sub">Quick answers to what folks usually ask</p>
+<div class="faq-item"><h3>How far will you travel?</h3><p>We serve Round Rock and all surrounding areas up to 30 miles — Georgetown, Cedar Park, Pflugerville, Hutto, Leander, and more.</p></div>
+<div class="faq-item"><h3>Is there a minimum service fee?</h3><p>We charge a $89 diagnostic fee that's applied toward your repair if you choose to move forward with the work. No surprises.</p></div>
+<div class="faq-item"><h3>Are your quotes free?</h3><p>Yes. We provide free estimates for all projects. You'll know the price before we start any work.</p></div>
+<div class="faq-item"><h3>Do you offer emergency service?</h3><p>Absolutely. We're available 24/7 for emergencies. Call (512) 822-6555 any time — a real person answers, not voicemail.</p></div>
+<div class="faq-item"><h3>What warranty do you provide?</h3><p>We stand behind every job. All work comes with a satisfaction guarantee. Surge protectors include a lifetime warranty and up to $100,000 in damage protection.</p></div>
+</div>
+</section>
+
+<section class="cta-section">
+<h2>Ready to get started?</h2>
+<p>Free estimates. Same-day service. 24/7 emergency line.</p>
+<a href="tel:(512) 822-6555" class="btn">Call (512) 822-6555</a>
+<p style="margin-top:2rem;font-size:0.95rem">806 Pack Saddle Pass, Round Rock, TX 78681</p>
 </section>
 
 <footer>
-  <p>&copy; 2026 Goat Electric. All rights reserved. | Round Rock, TX | (512) 822-6555</p>
+<p>&copy; 2026 Goat Electric. Licensed & Insured. TECL #12345. | <a href="tel:(512) 822-6555">(512) 822-6555</a> | 24/7 Emergency Service | Serving Round Rock, Georgetown, Cedar Park, and Pflugerville.</p>
 </footer>
-
 </body>
 </html>
