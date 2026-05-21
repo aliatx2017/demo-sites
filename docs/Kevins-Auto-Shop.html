@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin's Auto Shop | 4.9 Stars | Georgetown Auto Repair</title>
+<style>
+:root{--navy:#1a2332;--red:#c0392b;--gold:#d4a843;--bg:#fafafa;--text:#333;--light:#f5f5f5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+.top-bar{background:var(--navy);color:#fff;padding:8px 20px;font-size:.85rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.top-bar a{color:var(--gold)}
+.trust-badges{display:flex;gap:16px;flex-wrap:wrap;font-size:.8rem}
+.trust-badges span::before{content:"✓ ";color:var(--gold)}
+
+header{background:var(--navy);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+header h1{font-size:1.3rem;font-weight:700}
+.call-btn{background:var(--red);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:1rem;min-height:48px;display:inline-flex;align-items:center;gap:8px;transition:transform .2s}
+.call-btn:hover{transform:scale(1.03)}
+
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#2c3e50 100%);color:#fff;padding:60px 20px;text-align:center}
+.hero h2{font-size:2rem;margin-bottom:12px}
+.hero p{font-size:1.1rem;opacity:.9;max-width:600px;margin:0 auto 24px}
+.hero .stars{font-size:1.5rem;color:var(--gold);margin-bottom:12px}
+.hero-badges{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:.9rem}
+.hero-badges div{background:rgba(255,255,255,.1);padding:8px 16px;border-radius:8px}
+
+.services{padding:60px 20px;max-width:1000px;margin:0 auto}
+.services h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.svc-card{background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
+.svc-card:hover{transform:translateY(-3px)}
+.svc-card .icon{font-size:2rem;margin-bottom:12px}
+.svc-card h3{color:var(--navy);margin-bottom:8px;font-size:1.1rem}
+.svc-card p{font-size:.9rem;color:#666}
+
+.why{background:var(--light);padding:60px 20px}
+.why h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.why-card{text-align:center;padding:20px}
+.why-card .icon{font-size:2.5rem;margin-bottom:12px}
+.why-card h3{color:var(--navy);margin-bottom:6px}
+.why-card p{font-size:.85rem;color:#666}
+
+.reviews{padding:60px 20px;max-width:900px;margin:0 auto}
+.reviews h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:40px}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.review{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.review .stars{color:var(--gold);margin-bottom:8px}
+.review blockquote{font-style:italic;color:#555;margin-bottom:12px;line-height:1.5}
+.review cite{font-size:.85rem;color:#888;font-style:normal}
+
+.contact{padding:60px 20px;max-width:700px;margin:0 auto}
+.contact h2{text-align:center;font-size:1.8rem;color:var(--navy);margin-bottom:8px}
+.contact .sub{text-align:center;color:#666;margin-bottom:32px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-weight:600;margin-bottom:4px;font-size:.9rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit}
+.form-group textarea{resize:vertical;min-height:100px}
+.submit-btn{background:var(--red);color:#fff;border:none;padding:16px 40px;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;width:100%;min-height:48px;transition:background .2s}
+.submit-btn:hover{background:#a93226}
+
+.cta-section{background:var(--navy);color:#fff;padding:60px 20px;text-align:center}
+.cta-section h2{font-size:1.8rem;margin-bottom:12px}
+.cta-section p{opacity:.9;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-section .call-btn{font-size:1.2rem;padding:16px 40px}
+
+footer{background:#111;color:#888;text-align:center;padding:24px;font-size:.85rem}
+footer a{color:var(--gold)}
+
+@media(max-width:600px){
+  .hero h2{font-size:1.5rem}
+  header h1{font-size:1rem}
+  .trust-badges{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="trust-badges">
+    <span>ASE Certified</span>
+    <span>Family Owned</span>
+    <span>Georgetown Local</span>
+  </div>
+  <a href="tel:+15125085141">Open Mon-Sat &bull; (512) 508-5141</a>
+</div>
+
+<header>
+  <h1>Kevin's Auto Shop</h1>
+  <a href="tel:+15125085141" class="call-btn">📞 Call Now</a>
+</header>
+
+<section class="hero">
+  <div class="stars">★★★★★</div>
+  <h2>Georgetown's Trusted Auto Repair Shop</h2>
+  <p>Honest work, fair prices, and your car done right the first time. Serving Georgetown and Williamson County families since day one.</p>
+  <a href="#contact" class="call-btn" style="font-size:1.1rem">Get a Free Estimate</a>
+  <a href="tel:+15125085141" class="call-btn" style="margin-left:12px;font-size:1.1rem">📞 (512) 508-5141</a>
+  <div class="hero-badges">
+    <div>🔧 ASE Certified Techs</div>
+    <div>⭐ 4.9-Star Rated</div>
+    <div>🏠 Locally Owned</div>
+    <div>💰 Fair Pricing</div>
+  </div>
+</section>
+
+<section class="services">
+  <h2>What We Fix</h2>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="icon">🔧</div>
+      <h3>Brake Service</h3>
+      <p>Pads, rotors, brake fluid flush, and complete brake system inspections. Stop safe every time.</p>
+    </div>
+    <div class="svc-card">
+      <div class="icon">🛢️</div>
+      <h3>Oil Changes</h3>
+      <p>Conventional, synthetic blend, and full synthetic. Multi-point inspection included with every oil change.</p>
+    </div>
+    <div class="svc-card">
+      <div class="icon">❄️</div>
+      <h3>A/C & Heating</h3>
+      <p>A/C recharge, compressor repair, and heater core service. Texas heat is no joke — we keep you cool.</p>
+    </div>
+    <div class="svc-card">
+      <div class="icon">⚙️</div>
+      <h3>Engine Diagnostics</h3>
+      <p>Check engine light? We use dealer-grade scanners to find the real problem, not guess.</p>
+    </div>
+    <div class="svc-card">
+      <div class="icon">🚗</div>
+      <h3>Transmission</h3>
+      <p>Fluid changes, filter replacement, and transmission rebuilds. Manual and automatic.</p>
+    </div>
+    <div class="svc-card">
+      <div class="icon">🔋</div>
+      <h3>Electrical & Battery</h3>
+      <p>Alternators, starters, battery testing and replacement. Wiring diagnosis and repair.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <h2>Why Georgetown Trusts Kevin's</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon">⭐</div>
+      <h3>4.9-Star Rating</h3>
+      <p>Hundreds of five-star reviews from real Georgetown customers.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">💬</div>
+      <h3>Honest Quotes</h3>
+      <p>We tell you what's wrong, what it costs, and let you decide. No pressure, no upsells.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🔧</div>
+      <h3>ASE Certified</h3>
+      <p>Our technicians are ASE certified and trained on all makes and models.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h3>Family Owned</h3>
+      <p>Not a chain. We know your name and treat your car like our own.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>What Our Customers Say</h2>
+  <div class="review-grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Kevin and his team are honest, thorough, and always get the job done right. I won't take my truck anywhere else."</blockquote>
+      <cite>— James R., Georgetown, TX</cite>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Had a check engine light and they diagnosed it same day. Fair price, no surprises. Been coming back for three years now."</blockquote>
+      <cite>— Maria G., Round Rock, TX</cite>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <blockquote>"My A/C died in July. They squeezed me in same day and had it blowing cold by afternoon. These guys are the real deal."</blockquote>
+      <cite>— David L., Georgetown, TX</cite>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Request a Free Estimate</h2>
+  <p class="sub">Tell us about your vehicle and we'll get back to you same day.</p>
+  <form action="#" onsubmit="return false">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="John Smith">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="(512) 555-1234">
+    </div>
+    <div class="form-group">
+      <label for="service">What do you need?</label>
+      <select id="service">
+        <option value="">Select a service...</option>
+        <option>Oil Change</option>
+        <option>Brake Service</option>
+        <option>A/C Repair</option>
+        <option>Engine Diagnostics (Check Engine Light)</option>
+        <option>Transmission Service</option>
+        <option>Electrical / Battery</option>
+        <option>State Inspection</option>
+        <option>Other — describe below</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="vehicle">Year / Make / Model</label>
+      <input type="text" id="vehicle" placeholder="2019 Toyota Tacoma">
+    </div>
+    <div class="form-group">
+      <label for="details">Anything else?</label>
+      <textarea id="details" placeholder="Describe the issue or what you need..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Get My Free Estimate →</button>
+  </form>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Get Your Car Fixed Right?</h2>
+  <p>Honest pricing. ASE certified techs. Georgetown's top-rated auto repair.</p>
+  <a href="tel:+15125085141" class="call-btn">📞 Call (512) 508-5141</a>
+</section>
+
+<footer>
+  Kevin's Auto Shop &bull; Georgetown, TX &bull; <a href="tel:+15125085141">(512) 508-5141</a><br>
+  Mon-Fri 8am-6pm &bull; Sat 8am-2pm &bull; Closed Sunday
+</footer>
+
+</body>
+</html>
